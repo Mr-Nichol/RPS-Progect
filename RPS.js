@@ -1,11 +1,12 @@
 const array = ["rock" , "paper" , "scissors"];
 const btns = document.querySelectorAll('input');
-const marks = document.querySelector('.score')
-const stats = document.querySelector('.status')
+const marks = document.querySelector('.score');
+const stats = document.querySelector('.status');
 
 function disableButtons(){
     btns.forEach(function(rbtn){
-        rbtn.disabled = true;        
+        rbtn.disabled = true;
+
     })
 }
 
@@ -21,22 +22,23 @@ function playround(playersSelection){
     if(computersSelection === playersSelection){
         score += 1;
         if (score>=5){
-            marks.textContent = "you won";
-            disableButtons()
-            
-        }
-        else(score<5);
+            disableButtons();
             stats.textContent = "your score is " + score;
-            marks.textContent = "you won next round";
+            marks.textContent = "you won the game";   
+        }
+        else {
+        stats.textContent = "your score is " + score;
+        marks.textContent = "you won next round";
+        };     
     }
     else {
         marks.textContent = "try agin";
         console.log("try agin");
-            }            
-    }
+            }       
+}
 
 
-    
+
 btns.forEach(btn =>{
     btn.addEventListener('click',function (){
         playround(btn.value);

@@ -1,0 +1,30 @@
+h1,
+#buttons,
+.score,
+.status  {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+input {
+    background-color: black;
+    padding: 15px;
+    color: aliceblue;
+    text-align: center;
+    border-radius: 5px;
+    font-size: large;
+    font-weight: bold;
+}
+
+input:hover {
+    background-color: rgba(230, 40, 40, 0.829);
+}
+input:active {
+    background-color: rgb(238, 140, 133);
+}
+
+.score,
+.status {
+    margin: 10px;
+}
